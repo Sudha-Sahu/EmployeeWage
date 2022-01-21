@@ -1,17 +1,20 @@
 public class EmployeeWage{
 	public static void main(String args[])
 	{
-		int isfulltime = 1;
-		int emp_rate_per_hr=20;
+		int isParttime = 1;
+		int isFulltime = 2;
+		int empRatePerHr=20;
 		int empHrs=0;
 		int empWage=0;	
 
-		double empCheck = Math.floor (Math.random() * 10) % 2;
-		if (empCheck == isfulltime)
+		double empCheck = Math.floor (Math.random() * 10) % 3;
+		if (empCheck == isParttime)
+			empHrs=4;
+		else if(empCheck == isFulltime)        
 			empHrs=8;
-		else        
+		else
 			empHrs=0;
-		empWage= empHrs * emp_rate_per_hr;
+		empWage= empHrs * empRatePerHr;
 		System.out.println("calculating EmpWage: "+empWage);
 	}
 }
